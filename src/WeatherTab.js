@@ -17,7 +17,7 @@ export default function WeatherTab(props) {
         <div className="col-6">
           <div className="clearfix d-flex align-item-center">
             <div className="float-left">
-              <Icon code={props.data.icon} alt={props.data.description}/>
+              <Icon code={props.data.description} alt="icon-weather"/>
               
             </div>
             <div className="float-left">
