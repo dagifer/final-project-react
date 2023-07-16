@@ -1,0 +1,14 @@
+.Temp-day{
+    text-align: center;
+}
+
+.Temperature-max{
+    opacity: 0.6;
+    margin-left: 5px;
+}
+
+.Temperature-min{
+    opacity: 0.6;
+    margin-left: 5px;
+
+}

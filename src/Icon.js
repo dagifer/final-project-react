@@ -42,5 +42,5 @@ export default function Icon(props) {
       icon = `/icons/clear-sky.svg`;
       console.log(`sky`);
   }
-  return <img src={icon} alt={props.code} />;
+  return <img src={icon} alt={props.code}/>;
 }
