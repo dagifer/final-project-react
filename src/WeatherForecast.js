@@ -20,16 +20,21 @@ if (loaded){
 
     <div className="WeatherForecast">
         <div className="row">
-            <div className="col">
-               <ForecastDay data={forecast}/>
-               
-
+            {forecast.map(function (dailyForecast, index){
+                if (index<4){
+                return(
+            <div className="col" key={index}>
+               <ForecastDay data={dailyForecast}/>
             </div>
+            );
+            } else {
+                return null;
+            }
+            })}
+            
         </div>
     </div>
     );
-    
-   
 
 } else {
     const apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
