@@ -11,7 +11,7 @@ function handleCoords(response){
     
     setForecast(response.data.daily);
     setLoaded(true);
-
+   
 
 }
 
@@ -32,10 +32,11 @@ if (loaded){
    
 
 } else {
-    let apiKey = "o36b6dafeb6ef56f34fa0t0eceebce4e";
-    let longitude  = props.coordinates.lon;
+    const apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
+    let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiUrl =`https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`
+    const apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+   
 
     axios.get(apiUrl).then(handleCoords);
 
