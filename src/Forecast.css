@@ -1,4 +1,4 @@
-.Temp-day{
+body{
     text-align: center;
 }
 
@@ -11,4 +11,11 @@
     opacity: 0.6;
     margin-left: 5px;
 
+}
+
+.Animated{
+    margin-top: 30px;
+    display: block;
+    font-size: 10px;
+    
 }
