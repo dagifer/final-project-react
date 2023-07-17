@@ -12,6 +12,7 @@ function handleCoords(response){
     setForecast(response.data.daily);
     setLoaded(true);
 
+
 }
 
 if (loaded){
@@ -20,7 +21,8 @@ if (loaded){
     <div className="WeatherForecast">
         <div className="row">
             <div className="col">
-               <ForecastDay data={forecast[0]}/>
+               <ForecastDay data={forecast}/>
+               
 
             </div>
         </div>
@@ -30,10 +32,10 @@ if (loaded){
    
 
 } else {
-    let apiKey = "a969311cfcbb4a83dfad2cf7478397f9";
+    let apiKey = "o36b6dafeb6ef56f34fa0t0eceebce4e";
     let longitude  = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiUrl =`https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`
+    let apiUrl =`https://api.shecodes.io/weather/v1/current?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=metric`
 
     axios.get(apiUrl).then(handleCoords);
 
